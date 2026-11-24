@@ -7,13 +7,59 @@
 </head>
 <body>
     <script>
+        console.log('Hello')
+        console.log('Welcome')
+
+        //keywords and variables
+        //var,let,const
+
+        //var
+        //declaration   var age;
+        //initialization    age=20;
+        var age=20;
+        
+        //re-initialization
+        age=30;
+        //re-declaration
+        var age=40;
+        console.log("age: ",age);
+
+        //let
+        let course="Mern";
+        course="dsa"
+        //cannot re-declaration        let course="dsa";
+        console.log('course: ',course);
+
+        //const
+        const pan="SFEINV23455";
+        // cannot re-initialization and re-declaration       pan="DGHBESF342";  const pan;
+        console.log("pan: ",pan);
+
+
+        let username='admin'
+        let password=123456
+        if(username=='admin' && password==123456){
+            console.log('login success')
+        }else{
+            console.log('login failed')
+        }
+
+        
+        //function
+        function student(name,clg='sece'){
+            console.log(`Hello ${name} welcome to ${clg} college`);
+        }
+        student('ragul')
+        student('kumar')
+        student('vishnu')
+
         //Employee
         function Employee(Name,empid,comp='Microsoft'){
             console.log(`Employee Name: ${Name} Employee Id: ${empid} Company: ${comp}`);
         }
-        Employee('Ram',143)
-        Employee('Raj',156)
-        Employee('Ragu',196)
+        Employee('vishnu',1)
+        Employee('Raj',2)
+        Employee('Ragu',3)
 
 
 
@@ -34,8 +80,6 @@
             return a*b
         }
         console.log(mult(2,4))
-
-
 
         //in function passing the another function as an argument
         function sece(callback){
