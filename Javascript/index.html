@@ -62,7 +62,6 @@
         Employee('Ragu',3)
 
 
-
         //function in datatype
         let data1=function(){
             return 'Hello Employee'
@@ -105,7 +104,7 @@
         //promise
         //resolve,reject fullfilled
         let fetch_api=new Promise((resolve,reject)=>{
-            let api=false;
+            let api=true;
             if(api){
             resolve('fetched api')
         }else{
@@ -116,6 +115,70 @@
             
         })
         console.log(fetch_api)
+
+        // ======Object======
+
+        let emp={
+            emp_id:100,
+            emp_name:"Vishnu",
+            salary:900000
+        }
+
+        console.log(emp);
+
+        // Dot Notation
+        console.log(emp.emp_name);
+
+        //Square Brackets
+        console.log(emp["salary"]);
+        
+        let emp2=[
+            {
+                emp_id:100,
+                emp_name:"vishnu",
+                salary:900000,
+                skills:["python","java","sql"]
+            },
+            {
+                emp_id:101,
+                emp_name:"gokul",
+                salary:60000,
+                company:{
+                    c1:"tcs",c2:"accenture"
+                }
+            }
+        ]
+
+        console.log(emp2[0].skills[1]);
+
+        console.log(emp2[1].company.c2);
+
+        // object ot stiring
+        // let stringify_data = JSON.stringify(emp2);
+        // console.log(stringify_data);
+
+        // string to object
+        // let parsed_data=JSON.parse(stringify_data);
+        // console.log(parsed_data);
+
+        // let copied_data=emp2;
+        
+
+        // Shallow copy(spread operator)
+        // let copied_data={...emp2};
+
+        // copied_data.salary=80000;
+
+        // copied_data[1].company.c1="Philips";
+
+        // Deep copy
+
+        let copied_data=JSON.parse(JSON.stringify(emp2));
+        copied_data[1].company.c1="Philips";
+
+        console.log("Original data ",emp2);
+        console.log("Copied data ",copied_data);
+
 
     </script>
     
